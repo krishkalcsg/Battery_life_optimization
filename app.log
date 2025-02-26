@@ -1,0 +1,163 @@
+2025-02-05 14:41:26,878 - root - ERROR - Error loading data: Object of type Timestamp is not JSON serializable
+2025-02-05 14:41:40,853 - root - ERROR - Error generating SoC plot: plot_soc_over_time() takes 0 positional arguments but 1 was given
+2025-02-05 14:42:13,117 - root - ERROR - Error generating plots: [Errno 2] No such file or directory: 'plots/acceleration(m/s²)_plot.png'
+2025-02-05 14:46:37,768 - root - ERROR - Error generating SoC plot: plot_soc_over_time() takes 0 positional arguments but 1 was given
+2025-02-05 14:47:00,085 - root - ERROR - Error generating plots: [Errno 2] No such file or directory: 'plots/acceleration(m/s²)_plot.png'
+2025-02-05 16:57:37,821 - root - ERROR - Error generating plots: [Errno 2] No such file or directory: 'plots/acceleration(m/s²)_plot.png'
+2025-02-05 17:01:25,065 - root - ERROR - Error generating plots: [Errno 2] No such file or directory: 'plots/acceleration(m/s²)_plot.png'
+2025-02-05 17:07:26,833 - root - ERROR - Error generating plots: [Errno 2] No such file or directory: 'plots/acceleration(m/s²)_plot.png'
+2025-02-05 17:13:18,914 - root - ERROR - Error generating plots: [Errno 2] No such file or directory: 'plots/acceleration(m/s²)_plot.png'
+2025-02-05 17:23:45,349 - root - ERROR - Error generating plots: [Errno 2] No such file or directory: 'plots/speed(m/s)_plot.png'
+2025-02-06 11:36:34,888 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-02-06 11:38:43,233 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-02-06 12:50:23,371 - root - ERROR - Error making prediction: tuple index out of range
+2025-02-06 13:04:19,274 - root - ERROR - Error making prediction: name 'df' is not defined
+2025-02-06 13:06:53,915 - root - ERROR - Error making prediction: name 'numerical_columns' is not defined
+2025-02-06 14:15:36,066 - root - ERROR - Error generating plots: [Errno 2] No such file or directory: 'plots/speed(m/s)_plot.png'
+2025-02-07 14:42:52,102 - root - ERROR - Error making prediction: 400: Index out of bounds for input sequence.
+2025-02-07 14:52:52,707 - root - ERROR - Error making prediction: 400: Index out of bounds for input sequence.
+2025-02-07 15:01:48,625 - root - ERROR - Error making prediction: 400: Index out of bounds for input sequence.
+2025-02-07 15:03:16,354 - root - ERROR - Error making prediction: 400: Index out of bounds for input sequence.
+2025-02-14 10:31:29,858 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-14 10:31:29,859 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-14 10:31:29,867 - werkzeug - INFO -  * Restarting with stat
+2025-02-14 10:31:39,047 - werkzeug - WARNING -  * Debugger is active!
+2025-02-14 10:31:39,051 - werkzeug - INFO -  * Debugger PIN: 123-725-523
+2025-02-14 10:55:04,440 - werkzeug - INFO - 127.0.0.1 - - [14/Feb/2025 10:55:04] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-14 10:55:04,489 - werkzeug - INFO - 127.0.0.1 - - [14/Feb/2025 10:55:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-14 10:56:22,170 - werkzeug - INFO - 127.0.0.1 - - [14/Feb/2025 10:56:22] "[33mGET /docs HTTP/1.1[0m" 404 -
+2025-02-14 10:57:15,036 - werkzeug - INFO - 127.0.0.1 - - [14/Feb/2025 10:57:15] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-14 10:57:15,084 - werkzeug - INFO - 127.0.0.1 - - [14/Feb/2025 10:57:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-14 10:59:20,851 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-14 10:59:20,857 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-14 10:59:20,858 - werkzeug - INFO -  * Restarting with stat
+2025-02-14 10:59:33,482 - werkzeug - WARNING -  * Debugger is active!
+2025-02-14 10:59:33,488 - werkzeug - INFO -  * Debugger PIN: 123-725-523
+2025-02-14 11:02:25,328 - werkzeug - INFO - 127.0.0.1 - - [14/Feb/2025 11:02:25] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-15 18:58:55,836 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-15 19:10:55,805 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-15 19:16:58,726 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 10:50:44,501 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 10:51:17,455 - root - ERROR - Error generating variable plots: [Errno 2] No such file or directory: 'plots/speed(m/s)_plot.png'
+2025-02-16 10:53:06,014 - root - ERROR - Error generating variable plots: [Errno 2] No such file or directory: 'plots/speed(m/s)_plot.png'
+2025-02-16 10:54:30,122 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 10:55:44,406 - root - ERROR - Error generating variable plots: [Errno 2] No such file or directory: 'plots/speed(m/s)_plot.png'
+2025-02-16 10:55:58,205 - root - ERROR - Error generating variable plots: [Errno 2] No such file or directory: 'plots/speed(m/s)_plot.png'
+2025-02-16 11:00:34,701 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 11:01:12,493 - root - ERROR - Error generating variable plots: [Errno 2] No such file or directory: 'plots/speed(m/s)_plot.png'
+2025-02-16 11:13:50,819 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 11:14:43,953 - root - ERROR - Error generating Variables plot: name 're' is not defined
+2025-02-16 11:15:49,147 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 11:16:03,879 - root - ERROR - Error generating Variables plot: name 're' is not defined
+2025-02-16 12:56:46,565 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 12:59:53,506 - root - ERROR - Error generating Variables plot: name 're' is not defined
+2025-02-16 13:02:16,592 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 13:14:09,442 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 13:17:29,428 - root - ERROR - Error making prediction: Input must be a list of lists (time-series format).
+2025-02-16 13:21:32,960 - root - ERROR - Invalid JSON input: Expecting value: line 33 column 1 (char 3605)
+2025-02-16 13:21:32,962 - root - ERROR - Error making prediction: Expecting value: line 33 column 1 (char 3605)
+2025-02-16 13:24:12,893 - root - ERROR - Error making prediction: Input feature count does not match training data.
+2025-02-16 13:28:05,591 - root - ERROR - Invalid JSON input: Expecting ',' delimiter: line 1 column 35164 (char 35163)
+2025-02-16 13:28:05,593 - root - ERROR - Error making prediction: Expecting ',' delimiter: line 1 column 35164 (char 35163)
+2025-02-16 13:30:29,942 - root - ERROR - Error making prediction: Input feature count does not match training data.
+2025-02-16 13:40:10,503 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 13:40:16,885 - root - ERROR - Error making prediction: Input must be a list of lists (time-series format).
+2025-02-16 13:40:18,839 - root - ERROR - Error making prediction: Input must be a list of lists (time-series format).
+2025-02-16 13:42:46,418 - root - ERROR - Error making prediction: Input feature count does not match training data.
+2025-02-16 13:55:59,170 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 13:56:26,018 - root - ERROR - Error making prediction: name 'load_model' is not defined
+2025-02-16 13:57:24,885 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 13:57:36,851 - root - ERROR - Error making prediction: Input feature count does not match training data.
+2025-02-16 14:02:22,252 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 14:04:23,661 - root - ERROR - Error making prediction: Input must be a list of lists (time-series format).
+2025-02-16 14:06:46,334 - root - ERROR - Error making prediction: Input must be a list of lists (time-series format).
+2025-02-16 14:06:47,871 - root - ERROR - Error making prediction: Input must be a list of lists (time-series format).
+2025-02-16 14:21:33,558 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 15:04:40,631 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 15:05:31,090 - root - ERROR - Error making prediction: name 'evaluate_and_forecast' is not defined
+2025-02-16 15:07:28,628 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 15:08:08,413 - root - ERROR - Error making prediction: name 'y_test' is not defined
+2025-02-16 15:10:34,212 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 15:11:07,560 - root - ERROR - Error making prediction: name 'y_test' is not defined
+2025-02-16 15:19:03,461 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 15:26:11,782 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 15:32:37,743 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 15:33:32,967 - root - ERROR - Error making prediction: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 1
+'y' sizes: 100
+
+2025-02-16 15:36:08,350 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-16 15:44:06,784 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-17 10:26:40,324 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-17 10:33:36,898 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-18 11:13:36,008 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-18 12:59:52,521 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-18 14:13:00,037 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-18 14:22:02,244 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-18 14:31:59,552 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-18 14:35:44,380 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-18 14:44:44,616 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-19 14:37:47,320 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-19 14:44:40,611 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-19 14:54:35,756 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-19 18:03:01,578 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-19 18:14:49,380 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-20 09:30:45,199 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-20 09:36:42,204 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-20 10:39:43,150 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-20 10:51:18,487 - tensorflow - WARNING - 5 out of the last 11 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000029D25880E00> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-02-20 10:52:52,841 - tensorflow - WARNING - 5 out of the last 11 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000029D69345580> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-02-21 11:44:38,873 - tensorflow - WARNING - From c:\Users\krishkal\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-25 15:38:53,934 - tensorflow - WARNING - From C:\Users\krishkal\myenv\lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-25 15:44:12,263 - tensorflow - WARNING - 5 out of the last 13 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000002329BF87130> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-02-25 15:55:27,262 - tensorflow - WARNING - 5 out of the last 15 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000002329AF613F0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-02-26 13:39:30,144 - tensorflow - WARNING - From C:\Users\krishkal\myenv\lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-26 14:50:41,110 - tensorflow - WARNING - From C:\Users\krishkal\myenv\lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-02-26 14:57:03,085 - tensorflow - WARNING - 5 out of the last 13 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000026114B3FEB0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-02-26 14:58:32,366 - tensorflow - WARNING - 5 out of the last 15 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x00000261139264D0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
