@@ -28,7 +28,7 @@ logging.basicConfig(
 # 🚀 Initialize FastAPI
 app = FastAPI(title="Battery Analytics API")
 
-# ✅ Load Data
+# ✅ Load Data Endpoint
 @app.get("/data/")
 def get_data():
     try:
@@ -39,7 +39,7 @@ def get_data():
         logging.error(f"Error loading data: {e}")
         raise HTTPException(status_code=500, detail=f"Error loading data: {e}")
 
-# 📈 Generate Plots
+# 📈 Generate Plots Endpoint
 @app.get("/plot/{plot_type}/")
 def get_plot(plot_type: str):
     df = load_data()
@@ -68,45 +68,54 @@ def get_plot(plot_type: str):
     except Exception as e:
         logging.error(f"Error generating plot: {e}")
         raise HTTPException(status_code=500, detail=f"Error generating plot: {e}")
-# 🔮 Prediction Endpoint
-class PredictionInput(BaseModel):
-    input_data: list
 
-@app.post("/predict/")
-def predict_soh(data: PredictionInput):
+# 🔮 **Prediction Endpoint (Auto-fetch Last 50 Timesteps)**
+# 🔮 **Prediction Endpoint (Auto-fetch Last 50 Timesteps)**
+@app.get("/predict/")
+def predict_soh():
     try:
-        input_data = np.array(data.input_data)
+        # ✅ Load the latest dataset
+        df = load_data()
         X, y, feature_scaler, target_scaler = preprocess_data()
-        sequence_length, num_features = X.shape[1], X.shape[2]
-        
-        if input_data.shape != (sequence_length, num_features):
-            raise ValueError("Input shape mismatch")
-        
-        input_sequence = feature_scaler.transform(input_data)
-        input_sequence = input_sequence.reshape(1, sequence_length, -1)
-        
+
+        # Ensure we have enough data points
+        sequence_length = 50
+        if X.shape[0] < sequence_length:
+            raise HTTPException(status_code=400, detail=f"Not enough data points! Need at least {sequence_length}, but got {X.shape[0]}.")
+
+        # Extract the last 50 timesteps
+        input_sequence = X[-sequence_length:].reshape(1, sequence_length, -1)  # Reshape for LSTM model
+
+        # 🔍 **Load or Train Model**
         model = load_or_train_model()
+
+        # Perform prediction and forecasting
         y_pred_original, y_test_original, forecasted_soh = evaluate_and_forecast(
             model, X, y, target_scaler, weeks=4
         )
-        
-        return JSONResponse(content={"forecasted_soh": forecasted_soh.tolist()})
+
+        # ✅ Ensure list format for FastAPI JSON response
+        return JSONResponse(content={"forecasted_soh": list(map(float, forecasted_soh))})
+    
     except Exception as e:
         logging.error(f"Prediction error: {e}")
         raise HTTPException(status_code=500, detail=f"Prediction error: {e}")
 
-# 📊 Model Comparison Endpoint
+
+# 📊 **Model Comparison Endpoint**
 @app.get("/compare_models/")
 def compare_models():
     try:
         models, X_test, y_test, target_scaler = train_models()
         results = {}
+
         for name, model in models.items():
             X_test_reshaped = X_test.reshape(X_test.shape[0], 50, 35) if name == "LSTM" else X_test
             y_pred = model.predict(X_test_reshaped)
             results[name] = evaluate_model(y_test, y_pred)
-        
+
         return JSONResponse(content=results)
+    
     except Exception as e:
         logging.error(f"Error comparing models: {e}")
         raise HTTPException(status_code=500, detail=f"Error comparing models: {e}")
