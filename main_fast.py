@@ -17,6 +17,7 @@ from data_visualization import (
 from data_preprocessing import preprocess_data
 from data_modelling2 import load_or_train_model, evaluate_and_forecast, visualize_results
 from data_comparision import train_models, evaluate_model
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # ✅ Logging setup
 logging.basicConfig(
@@ -39,24 +40,30 @@ def get_data():
         logging.error(f"Error loading data: {e}")
         raise HTTPException(status_code=500, detail=f"Error loading data: {e}")
 
-# 📈 Generate Plots Endpoint
+# 📈 **Dropdown for Plot Selection**
+@app.get("/plots/")
+def get_plot_options():
+    return {"available_plots": ["soc_over_time", "variables", "slope_vs_speed", "soh_over_time", "soh_distribution"]}
+
+# 📊 **Generate Plots Endpoint**
 @app.get("/plot/{plot_type}/")
 def get_plot(plot_type: str):
-    df = load_data()
-    os.makedirs("plots", exist_ok=True)  # Ensure plots directory exists
-
-    plot_functions = {
-        "soc_over_time": plot_soc_over_time,
-        "variables": plot_variables,
-        "slope_vs_speed": plot_slope_vs_speed,
-        "soh_over_time": plot_soh_over_time,
-        "soh_distribution": plot_soh_distribution
-    }
-
-    if plot_type not in plot_functions:
-        raise HTTPException(status_code=400, detail=f"Invalid plot type: {plot_type}")
-
     try:
+        df = load_data()
+        os.makedirs("plots", exist_ok=True)  # Ensure plots directory exists
+
+        plot_functions = {
+            "soc_over_time": plot_soc_over_time,
+            "variables": plot_variables,
+            "slope_vs_speed": plot_slope_vs_speed,
+            "soh_over_time": plot_soh_over_time,
+            "soh_distribution": plot_soh_distribution
+        }
+
+        if plot_type not in plot_functions:
+            raise HTTPException(status_code=400, detail=f"Invalid plot type: {plot_type}")
+
+        # ✅ Generate plot
         plot_path = plot_functions[plot_type](df)
 
         # Debugging step: Ensure plot_path is valid
@@ -65,16 +72,15 @@ def get_plot(plot_type: str):
             raise ValueError(f"Plot function did not return a valid file path for {plot_type}")
 
         return FileResponse(plot_path)
+
     except Exception as e:
         logging.error(f"Error generating plot: {e}")
         raise HTTPException(status_code=500, detail=f"Error generating plot: {e}")
 
-# 🔮 **Prediction Endpoint (Auto-fetch Last 50 Timesteps)**
-# 🔮 **Prediction Endpoint (Auto-fetch Last 50 Timesteps)**
+# 🔮 **Prediction Endpoint**
 @app.get("/predict/")
 def predict_soh():
     try:
-        # ✅ Load the latest dataset
         df = load_data()
         X, y, feature_scaler, target_scaler = preprocess_data()
 
@@ -83,26 +89,24 @@ def predict_soh():
         if X.shape[0] < sequence_length:
             raise HTTPException(status_code=400, detail=f"Not enough data points! Need at least {sequence_length}, but got {X.shape[0]}.")
 
-        # Extract the last 50 timesteps
-        input_sequence = X[-sequence_length:].reshape(1, sequence_length, -1)  # Reshape for LSTM model
+        # Extract last 50 timesteps
+        input_sequence = X[-sequence_length:].reshape(1, sequence_length, -1)  
 
-        # 🔍 **Load or Train Model**
+        # Load model
         model = load_or_train_model()
 
-        # Perform prediction and forecasting
+        # Predict and forecast
         y_pred_original, y_test_original, forecasted_soh = evaluate_and_forecast(
             model, X, y, target_scaler, weeks=4
         )
 
-        # ✅ Ensure list format for FastAPI JSON response
         return JSONResponse(content={"forecasted_soh": list(map(float, forecasted_soh))})
-    
+
     except Exception as e:
         logging.error(f"Prediction error: {e}")
         raise HTTPException(status_code=500, detail=f"Prediction error: {e}")
 
-
-# 📊 **Model Comparison Endpoint**
+# 📊 **Model Comparison Endpoint (With MAE, MSE, R²)**
 @app.get("/compare_models/")
 def compare_models():
     try:
@@ -111,8 +115,25 @@ def compare_models():
 
         for name, model in models.items():
             X_test_reshaped = X_test.reshape(X_test.shape[0], 50, 35) if name == "LSTM" else X_test
+            
+            # Predict
             y_pred = model.predict(X_test_reshaped)
-            results[name] = evaluate_model(y_test, y_pred)
+
+            # Convert back to original scale
+            y_pred_original = target_scaler.inverse_transform(y_pred.reshape(-1, 1))
+            y_test_original = target_scaler.inverse_transform(y_test.reshape(-1, 1))
+
+            # Calculate Metrics
+            mae = mean_absolute_error(y_test_original, y_pred_original)
+            mse = mean_squared_error(y_test_original, y_pred_original)
+            r2 = r2_score(y_test_original, y_pred_original)
+
+            # Store results
+            results[name] = {
+                "MAE": round(mae, 5),
+                "MSE": round(mse, 5),
+                "R²": round(r2, 5)
+            }
 
         return JSONResponse(content=results)
     
